@@ -4,6 +4,8 @@
 
 **Next.js 16** · **TypeScript** · **Tailwind CSS v4** · פריסה ל-**Vercel**
 
+🌐 **אתר חי:** https://kinders-landing.vercel.app (כל push ל-`main` מתפרס אוטומטית)
+
 ## הרצה מקומית
 ```bash
 npm install
