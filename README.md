@@ -6,6 +6,8 @@
 
 🌐 **אתר חי:** https://kinders-landing.vercel.app (כל push ל-`main` מתפרס אוטומטית)
 
+🎨 **שלושה עיצובים לבחירה:** [א](https://kinders-landing.vercel.app) · [ב](https://kinders-landing.vercel.app/b) · [ג](https://kinders-landing.vercel.app/c). מעבר ביניהם בכפתור "עיצוב" בפינת המסך ([פירוט](docs/07-versions.md))
+
 ## הרצה מקומית
 ```bash
 npm install
@@ -23,7 +25,7 @@ npm run dev
 | להוריד את פס "גרסת טיוטה" ולפתוח למנועי חיפוש | `isDraft: false` ב-`site.ts` |
 | איך כפתור התרומה עובד | משתנה הסביבה `PAYMENT_PROVIDER` (ראו `.env.example`) |
 | צבעים, גופנים ותגיות | `src/app/globals.css` + `DESIGN.md` |
-| הסקשנים של הדף | `src/components/sections/` |
+| הסקשנים של הדף | עיצוב א: `src/components/sections/` · ב: `src/components/v-b/` · ג: `src/components/v-c/` |
 
 ## סליקה
 כפתור התרומה עובר דרך `src/lib/payments/`, והאתר לא יודע איזה ספק פעיל:
@@ -56,6 +58,7 @@ npm run dev
 | [`docs/01-research.md`](docs/01-research.md) | המחקר, עם מקורות (העמותה, סליקה, Vercel, נגישות) |
 | [`docs/04-content-from-nonprofit.md`](docs/04-content-from-nonprofit.md) | מה צריך מהעמותה. גרסת PDF מעוצבת ב-`docs/pdf/` |
 | [`docs/05-skills-and-tools.md`](docs/05-skills-and-tools.md) | ה-Skills והכלים של Claude Code |
+| [`docs/07-versions.md`](docs/07-versions.md) | שלושת העיצובים, מה זז בעיצוב ב, ומה מוחקים כשהעמותה בוחרת |
 
 **ליצור את ה-PDF מחדש** אחרי שינוי ב-`docs/pdf/nonprofit-checklist.html` (צריך את Edge שמותקן ב-Windows):
 ```bash
