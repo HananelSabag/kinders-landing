@@ -1,9 +1,7 @@
 import { getPaymentProvider } from "@/lib/payments";
-import { DraftBanner } from "@/components/draft-banner";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { StickyDonate } from "@/components/sticky-donate";
-import { VersionSwitcher } from "@/components/version-switcher";
 import { Hero } from "@/components/sections/hero";
 import { Impact } from "@/components/sections/impact";
 import { HowItWorks } from "@/components/sections/how-it-works";
@@ -20,7 +18,6 @@ export default function Home() {
 
   return (
     <>
-      <DraftBanner />
       <SiteHeader />
       <main id="main">
         <Hero ctaLabel={ctaLabel} ctaHint={ctaHint} />
@@ -36,7 +33,6 @@ export default function Home() {
       </main>
       <SiteFooter />
       <StickyDonate />
-      <VersionSwitcher current="a" />
     </>
   );
 }

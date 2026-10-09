@@ -29,7 +29,7 @@ export function BHero() {
   });
 
   return (
-    <section id="top" aria-labelledby="b-hero-title" className="relative overflow-x-clip bg-b-orange pb-16 text-b-ink md:pb-24">
+    <section id="top" aria-labelledby="b-hero-title" className="relative overflow-x-clip bg-b-pear pb-16 text-b-ink md:pb-24">
       <div className="mx-auto max-w-7xl px-5 pt-6 md:px-10 md:pt-12">
         <h1
           id="b-hero-title"

@@ -143,7 +143,7 @@ export function BJourney() {
               <li
                 key={step.title}
                 className={`flex-1 border-t-[3px] pt-1.5 text-center transition-colors duration-300 ${
-                  i <= current ? "border-b-orange text-b-ink" : "border-b-ink/15 text-b-ink/45"
+                  i <= current ? "border-b-deep text-b-ink" : "border-b-ink/15 text-b-ink/45"
                 }`}
               >
                 {step.title}

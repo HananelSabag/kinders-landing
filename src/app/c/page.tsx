@@ -1,8 +1,6 @@
 import { getPaymentProvider } from "@/lib/payments";
-import { DraftBanner } from "@/components/draft-banner";
 import { SiteFooter } from "@/components/site-footer";
 import { StickyDonate } from "@/components/sticky-donate";
-import { VersionSwitcher } from "@/components/version-switcher";
 import { CHeader } from "@/components/v-c/header";
 import { CHero } from "@/components/v-c/hero";
 import { CDonateCard } from "@/components/v-c/donate-card";
@@ -22,7 +20,6 @@ export default function VersionC() {
 
   return (
     <>
-      <DraftBanner />
       <CHeader />
       <main id="main">
         <div className="mx-auto grid max-w-7xl px-5 md:px-8 lg:grid-cols-12 lg:gap-x-14">
@@ -46,7 +43,6 @@ export default function VersionC() {
       </main>
       <SiteFooter variant="c" />
       <StickyDonate barClassName="border-t border-c-line bg-white/95" buttonClassName="c-btn c-btn-teal" />
-      <VersionSwitcher current="c" />
     </>
   );
 }

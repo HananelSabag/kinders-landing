@@ -6,7 +6,7 @@
 
 🌐 **אתר חי:** https://kinders-landing.vercel.app (כל push ל-`main` מתפרס אוטומטית)
 
-🎨 **שלושה עיצובים לבחירה:** [א](https://kinders-landing.vercel.app) · [ב](https://kinders-landing.vercel.app/b) · [ג](https://kinders-landing.vercel.app/c). מעבר ביניהם בכפתור "עיצוב" בפינת המסך ([פירוט](docs/07-versions.md))
+🎨 **שלושה עיצובים לבחירה:** [א](https://kinders-landing.vercel.app) · [ב](https://kinders-landing.vercel.app/b) · [ג](https://kinders-landing.vercel.app/c). מעבר ביניהם ב-header ("גרסת דמו"), ובנייד מתוך התפריט ([פירוט](docs/07-versions.md))
 
 ## הרצה מקומית
 ```bash

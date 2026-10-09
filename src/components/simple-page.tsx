@@ -1,12 +1,10 @@
 import Link from "next/link";
-import { DraftBanner } from "./draft-banner";
 import { SiteFooter } from "./site-footer";
 import { Logo } from "./ui/logo";
 
 export function SimplePage({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <>
-      <DraftBanner />
       <header className="border-b border-ink/10">
         <div className="mx-auto flex h-18 max-w-3xl items-center px-5">
           <Link href="/" className="rounded-lg no-underline" aria-label="חזרה לעמוד הבית">

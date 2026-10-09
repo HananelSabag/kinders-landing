@@ -11,7 +11,7 @@ export function BFaq() {
           </h2>
           <p className="mt-5 text-lg text-b-ink/75">
             {site.legalName}, מס׳ עמותה <span className="tabular-nums">{site.registrationNumber}</span>.{" "}
-            <a href={site.contact.guidestar} target="_blank" rel="noopener noreferrer" className="font-medium text-b-orange-deep underline underline-offset-4">
+            <a href={site.contact.guidestar} target="_blank" rel="noopener noreferrer" className="font-medium text-b-deep underline underline-offset-4">
               כל הפרטים בגיידסטאר
               <span className="sr-only"> (נפתח בחלון חדש)</span>
             </a>

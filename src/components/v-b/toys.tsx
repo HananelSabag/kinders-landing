@@ -46,7 +46,7 @@ export function BToys() {
             <ul className="mt-6 space-y-4">
               {reject.map((item) => (
                 <li key={item} className="flex items-start gap-3.5 text-xl">
-                  <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full bg-b-orange-deep text-white">
+                  <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full bg-[#a3241b] text-white">
                     <X className="size-4" strokeWidth={3} aria-hidden />
                   </span>
                   {item}

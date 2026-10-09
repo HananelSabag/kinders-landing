@@ -1,8 +1,6 @@
 import { getPaymentProvider } from "@/lib/payments";
-import { DraftBanner } from "@/components/draft-banner";
 import { SiteFooter } from "@/components/site-footer";
 import { StickyDonate } from "@/components/sticky-donate";
-import { VersionSwitcher } from "@/components/version-switcher";
 import { BHeader } from "@/components/v-b/header";
 import { BHero } from "@/components/v-b/hero";
 import { BImpact } from "@/components/v-b/impact";
@@ -21,7 +19,6 @@ export default function VersionB() {
 
   return (
     <>
-      <DraftBanner />
       <BHeader />
       <main id="main">
         <BHero />
@@ -37,7 +34,6 @@ export default function VersionB() {
       </main>
       <SiteFooter variant="b" />
       <StickyDonate barClassName="bg-white/95 shadow-[0_-8px_24px_-12px_rgb(29_26_23/0.3)]" buttonClassName="b-btn b-btn-ink" />
-      <VersionSwitcher current="b" />
     </>
   );
 }

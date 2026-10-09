@@ -1,6 +1,7 @@
 import { site } from "@/content/site";
 import { Logo } from "./ui/logo";
 import { MobileMenu } from "./mobile-menu";
+import { DemoSwitch } from "./demo-switch";
 
 export function SiteHeader() {
   return (
@@ -10,7 +11,7 @@ export function SiteHeader() {
           <Logo />
         </a>
 
-        <nav aria-label="ניווט ראשי" className="hidden md:block">
+        <nav aria-label="ניווט ראשי" className="hidden lg:block">
           <ul className="flex items-center gap-1">
             {site.nav.map((link) => (
               <li key={link.href}>
@@ -25,11 +26,14 @@ export function SiteHeader() {
           </ul>
         </nav>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 lg:gap-5">
+          <DemoSwitch current="a" variant="inline" />
           <a href="#donate" className="btn btn-ink min-h-11 px-5 py-2">
             לתרומה
           </a>
-          <MobileMenu links={site.nav} />
+          <MobileMenu links={site.nav}>
+            <DemoSwitch current="a" variant="menu" />
+          </MobileMenu>
         </div>
       </div>
     </header>

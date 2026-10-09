@@ -4,9 +4,11 @@ import Image from "next/image";
 import { useState } from "react";
 import { useMotionValueEvent, useScroll } from "motion/react";
 import { site } from "@/content/site";
+import { DemoSwitch } from "@/components/demo-switch";
+import { MobileMenu } from "@/components/mobile-menu";
 import logoTree from "../../../public/brand/logo-tree.png";
 
-/** כתום כמו ה-Hero בהתחלה, לבן אחרי שגוללים. נעלם כשגוללים למטה וחוזר כשגוללים למעלה */
+/** בצבע ה-Hero בהתחלה, לבן אחרי שגוללים. נעלם כשגוללים למטה וחוזר כשגוללים למעלה */
 export function BHeader() {
   const { scrollY } = useScroll();
   const [solid, setSolid] = useState(false);
@@ -21,10 +23,10 @@ export function BHeader() {
   return (
     <header
       className={`sticky top-0 z-40 transition-[background-color,box-shadow,translate] duration-300 motion-reduce:transition-none ease-[var(--ease-out-expo)] ${
-        solid ? "bg-white/92 shadow-[0_8px_24px_-16px_rgb(29_26_23/0.4)] backdrop-blur-md" : "bg-b-orange"
+        solid ? "bg-white/92 shadow-[0_8px_24px_-16px_rgb(29_26_23/0.4)] backdrop-blur-md" : "bg-b-pear"
       } ${hidden ? "-translate-y-full focus-within:translate-y-0" : "translate-y-0"}`}
     >
-      <div className="mx-auto flex h-18 max-w-7xl items-center justify-between gap-4 px-5 md:px-10">
+      <div className="relative mx-auto flex h-18 max-w-7xl items-center justify-between gap-4 px-5 md:px-10">
         <a href="#top" className="inline-flex items-center gap-2.5 rounded-lg text-b-ink no-underline" aria-label={`${site.name}, לראש העמוד`}>
           <Image src={logoTree} alt="" sizes="44px" priority className="h-11 w-auto" />
           <span translate="no" className="font-b-display text-2xl font-semibold leading-none">
@@ -32,7 +34,7 @@ export function BHeader() {
           </span>
         </a>
 
-        <nav aria-label="ניווט ראשי" className="hidden md:block">
+        <nav aria-label="ניווט ראשי" className="hidden lg:block">
           <ul className="flex items-center gap-1">
             {site.nav.map((link) => (
               <li key={link.href}>
@@ -47,9 +49,15 @@ export function BHeader() {
           </ul>
         </nav>
 
-        <a href="#donate" className="b-btn b-btn-ink min-h-11 px-5 py-2 text-base">
-          לתרומה
-        </a>
+        <div className="flex items-center gap-2 lg:gap-5">
+          <DemoSwitch current="b" variant="inline" />
+          <a href="#donate" className="b-btn b-btn-ink min-h-11 px-5 py-2 text-base">
+            לתרומה
+          </a>
+          <MobileMenu links={site.nav} tone="white">
+            <DemoSwitch current="b" variant="menu" />
+          </MobileMenu>
+        </div>
       </div>
     </header>
   );

@@ -5,7 +5,7 @@ type Props = { ctaLabel: string; ctaHint: string };
 
 export function BDonate({ ctaLabel, ctaHint }: Props) {
   return (
-    <section id="donate" aria-labelledby="b-donate-title" className="bg-b-orange px-5 py-20 text-b-ink md:px-10 md:py-28">
+    <section id="donate" aria-labelledby="b-donate-title" className="bg-b-pear px-5 py-20 text-b-ink md:px-10 md:py-28">
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-12 lg:items-center">
         <div className="lg:col-span-5">
           <h2 id="b-donate-title" className="text-[clamp(2.6rem,6.5vw,5rem)] font-semibold">

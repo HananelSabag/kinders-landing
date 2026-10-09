@@ -2,7 +2,7 @@ import { RealTag } from "@/components/ui/real-tag";
 
 export function BClosing() {
   return (
-    <section aria-labelledby="b-closing-title" className="relative overflow-hidden bg-b-orange px-5 py-24 text-b-ink md:px-10 md:py-32">
+    <section aria-labelledby="b-closing-title" className="relative overflow-hidden bg-b-pear px-5 py-24 text-b-ink md:px-10 md:py-32">
       <div className="mx-auto flex max-w-7xl flex-col items-start gap-10 md:flex-row md:items-center md:justify-between">
         <div>
           <h2 id="b-closing-title" className="max-w-[13ch] text-[clamp(2.6rem,7vw,5.5rem)] font-semibold">

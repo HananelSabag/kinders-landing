@@ -115,7 +115,7 @@ export function BDonateForm({ ctaLabel, ctaHint }: Props) {
         </div>
 
         {d.state.error ? (
-          <p id={errorId} role="alert" className="rounded-2xl bg-b-orange/15 px-4 py-3 font-semibold text-b-orange-deep">
+          <p id={errorId} role="alert" className="rounded-2xl bg-[#c0262d]/10 px-4 py-3 font-semibold text-[#a3241b]">
             {d.state.error}
           </p>
         ) : null}
@@ -159,8 +159,8 @@ function Amount({
     >
       <input type="radio" name="amount" value={value} checked={checked} onChange={() => onSelect(value)} className="peer sr-only" />
       <span aria-hidden className="absolute inset-0 rounded-2xl border-2 border-b-ink/15 transition-colors peer-hover:border-b-ink/40" />
-      {checked ? <motion.span aria-hidden layoutId="b-amount" className="absolute inset-0 rounded-2xl bg-b-orange" /> : null}
-      <span className="relative block px-4 py-4 text-center font-b-display text-2xl font-semibold">{children}</span>
+      {checked ? <motion.span aria-hidden layoutId="b-amount" className="absolute inset-0 rounded-2xl bg-b-deep" /> : null}
+      <span className="relative block px-4 py-4 text-center font-b-display text-2xl font-semibold transition-colors peer-checked:text-white">{children}</span>
     </label>
   );
 }
