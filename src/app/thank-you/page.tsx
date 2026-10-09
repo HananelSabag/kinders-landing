@@ -11,6 +11,7 @@ export const metadata: Metadata = {
 
 const shareMessage = `תרמתי לעמותת ${site.name}: הם אוספים צעצועים, מחדשים ועוטפים אותם, ומעניקים אותם לילדים במסגרות חירום. מצטרפים?`;
 
+// TODO: לאשר מול העמותה שאכן נשלחת קבלה על כל תרומה
 export default function ThankYouPage() {
   return (
     <SimplePage title="תודה. באמת.">

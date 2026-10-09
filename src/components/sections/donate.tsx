@@ -12,9 +12,7 @@ export function Donate({ ctaLabel, ctaHint }: Props) {
           <h2 id="donate-title" className="text-[clamp(2rem,4.4vw,3.25rem)] font-bold">
             מה התרומה שלכם עושה
           </h2>
-          <p className="measure mt-4 text-xl">
-            הצעצועים מגיעים מכם. הכסף משלם על מה שהופך אותם למתנה: חומרי ניקוי, חלקי חילוף, נייר עטיפה, תגיות והובלה.
-          </p>
+          <p className="measure mt-4 text-xl">{site.donate.intro}</p>
 
           <dl className="mt-10 divide-y divide-ink/15 border-y border-ink/15">
             {site.donate.amounts.map((a) => (
