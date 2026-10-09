@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<title>מה צריך מהעמותה | הקינדרס</title>
+<!-- מקור ה-PDF. ליצירה מחדש: ראו docs/pdf/README.md -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700;800&family=Playpen+Sans+Hebrew:wght@600;700&display=block" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 15mm 14mm 18mm; }
+  :root {
+    --paper: #fff3eb; --paper-deep: #f6e4d6; --ink: #1f1b16; --ink-soft: #544a3f;
+    --mustard: #e9b949; --coral: #e8604c; --coral-deep: #b5412e;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { margin: 0; font-family: "Assistant", sans-serif; font-size: 11.2pt; line-height: 1.6; color: var(--ink); }
+  h1, h2 { font-family: "Playpen Sans Hebrew", "Assistant", sans-serif; margin: 0; line-height: 1.25; }
+  strong { font-weight: 700; }
+  code { font-family: inherit; font-weight: 700; direction: ltr; unicode-bidi: isolate; }
+
+  /* ── כותרת ── */
+  .head { display: flex; align-items: center; gap: 18px; background: var(--paper); border-radius: 18px; padding: 18px 22px; }
+  .head img { width: 74px; height: auto; flex: none; }
+  .head h1 { font-size: 25pt; }
+  .head p { margin: 2px 0 0; color: var(--ink-soft); font-size: 11.5pt; }
+
+  .live { margin-top: 12px; display: flex; align-items: center; gap: 12px; background: var(--mustard); border-radius: 14px; padding: 11px 18px; font-size: 11.5pt; }
+  .live b { font-family: "Playpen Sans Hebrew", sans-serif; font-size: 12.5pt; }
+  .live .url { direction: ltr; unicode-bidi: isolate; font-weight: 800; margin-inline-start: auto; }
+
+  .legend { display: flex; gap: 14px; align-items: center; margin: 14px 2px 4px; font-size: 10pt; color: var(--ink-soft); }
+
+  .have { margin-top: 10px; border: 2px dashed rgba(31,27,22,.25); border-radius: 14px; padding: 10px 16px; font-size: 10.8pt; }
+  .have b.t { font-family: "Playpen Sans Hebrew", sans-serif; }
+
+  /* ── סקשנים ── */
+  section { margin-top: 18px; }
+  h2 { font-size: 15.5pt; padding-bottom: 5px; margin-bottom: 8px; border-bottom: 2px solid var(--ink); display: flex; align-items: center; gap: 9px; }
+  h2::before { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--coral); flex: none; }
+
+  ul { list-style: none; margin: 0; padding: 0; }
+  li { display: flex; gap: 10px; align-items: baseline; padding: 5px 0; border-bottom: 1px solid rgba(31,27,22,.09); break-inside: avoid; }
+  li:last-child { border-bottom: 0; }
+
+  .pill { flex: none; min-width: 50px; text-align: center; font-size: 8.6pt; font-weight: 800; padding: 1px 8px; border-radius: 999px; line-height: 1.7; }
+  .must { background: var(--ink); color: var(--paper); }
+  .nice { background: var(--mustard); color: var(--ink); }
+  .later { background: #fff; color: var(--coral-deep); box-shadow: inset 0 0 0 1.5px var(--coral-deep); }
+
+  .note { color: var(--ink-soft); }
+
+  /* ── כסף ── */
+  .money p { margin: 0 0 7px; }
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 10px 0 12px; font-size: 10.2pt; break-inside: avoid; border: 1.5px solid var(--ink); border-radius: 12px; overflow: hidden; }
+  th { background: var(--ink); color: var(--paper); text-align: start; padding: 7px 10px; font-weight: 700; }
+  td { padding: 8px 10px; vertical-align: top; border-top: 1px solid rgba(31,27,22,.15); }
+  tr:nth-child(even) td { background: var(--paper); }
+  td:first-child { font-weight: 700; width: 25%; }
+  .rec { display: inline-block; margin-top: 3px; font-size: 8.5pt; font-weight: 800; background: var(--mustard); border-radius: 999px; padding: 0 7px; }
+
+  .foot { position: fixed; bottom: -11mm; inset-inline: 0; display: flex; justify-content: space-between; font-size: 8.5pt; color: var(--ink-soft); border-top: 1px solid rgba(31,27,22,.15); padding-top: 4px; }
+</style>
+</head>
+<body>
+
+<div class="foot"><span>עמותת הקינדרס (ע״ר) 580798858</span><span>אתר העמותה, אוקטובר 2026</span></div>
+
+<header class="head">
+  <img src="../../public/brand/logo-tree.png" alt="">
+  <div>
+    <h1>מה צריך מהעמותה</h1>
+    <p>כדי שהאתר של עמותת הקינדרס יהיה מוכן לעלות לאוויר</p>
+  </div>
+</header>
+
+<div class="live">
+  <b>האתר כבר באוויר, בגרסת טיוטה</b>
+  <span>אפשר להיכנס ולראות:</span>
+  <span class="url">kinders-landing.vercel.app</span>
+</div>
+
+<div class="legend">
+  <span class="pill must">חובה</span> צריך לפני שמפרסמים
+  <span class="pill nice">רצוי</span> ישפר את האתר
+  <span class="pill later">בהמשך</span> לשלב הבא
+</div>
+
+<div class="have">
+  <b class="t">מה כבר יש לנו:</b> מהפייסבוק לקחנו את <strong>הלוגו</strong> (ברזולוציה של 720px), את <strong>תמונת הקאבר</strong>, <strong>5 תמונות מהשטח</strong> (חתוכות בלי פנים) ו<strong>מכתב תודה</strong> ממרכז חירום. הדף בנוי עליהם.
+  נשאר בעיקר <strong>מספרים, נוסחים ואישורים</strong> מכם.
+</div>
+
+<section>
+  <h2>תוכן ומיתוג</h2>
+  <ul>
+    <li><span class="pill must">חובה</span><span><strong>לוגו בקובץ המקורי:</strong> עדיף וקטורי (SVG / AI / PDF). אם אין, PNG ברזולוציה גבוהה (לפחות 1000px) על רקע שקוף</span></li>
+    <li><span class="pill must">חובה</span><span><strong>משפט אחד שמסביר מה אתם עושים</strong> <span class="note">(איך הייתם אומרים את זה למישהו במעלית?)</span></span></li>
+    <li><span class="pill must">חובה</span><span><strong>הסיפור:</strong> למה “הקינדרס”? מה הקשר לקינדרטרנספורט? <span class="note">(אם יש סיפור משפחתי, הוא שווה זהב)</span></span></li>
+    <li><span class="pill must">חובה</span><span><strong>מספרים אמיתיים:</strong> כמה צעצועים חולקו עד היום? לכמה מסגרות? כמה מתנדבים?</span></li>
+    <li><span class="pill nice">רצוי</span><span><strong>“מה עושה התרומה שלי?”</strong> למשל: מה אפשר לעשות ב-36 ₪? ב-72 ₪? ב-180 ₪? <span class="note">(חומרי ניקוי, חלקי חילוף, עטיפה, הובלה...)</span></span></li>
+    <li><span class="pill nice">רצוי</span><span>2–3 <strong>ציטוטים</strong> ממנהלות מסגרות, <strong>באישור שלהן</strong> לפרסום</span></li>
+    <li><span class="pill nice">רצוי</span><span>שמות המסגרות ששיתפו פעולה, <strong>רק באישור</strong> <span class="note">(לפעמים אסור לפרסם מסגרות חירום)</span></span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>מסירת צעצועים</h2>
+  <ul>
+    <li><span class="pill must">חובה</span><span><strong>אילו צעצועים מקבלים?</strong> <span class="note">(משחקי קופסה שלמים, בובות, ספרים, פאזלים...)</span></span></li>
+    <li><span class="pill must">חובה</span><span><strong>מה לא מקבלים?</strong> <span class="note">(שבור? חסר חלקים? פרווה שאי אפשר לכבס?)</span></span></li>
+    <li><span class="pill must">חובה</span><span><strong>איך מוסרים?</strong> כתובת ושעות / איסוף מהבית / נקודות איסוף</span></li>
+    <li><span class="pill nice">רצוי</span><span>מצב נדרש: “נקי ושלם” או “גם אם צריך תיקון קטן, אנחנו מחדשים”</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>יצירת קשר</h2>
+  <ul>
+    <li><span class="pill must">חובה</span><span><strong>איזה טלפון / וואטסאפ / מייל לפרסם באתר?</strong> <span class="note">(היום מופיע מייל <bdi>Gmail</bdi> פרטי. כדאי לשקול מייל על הדומיין. בגרסת הטיוטה מופיע זמנית המספר של חננאל)</span></span></li>
+    <li><span class="pill must">חובה</span><span>קישור לעמוד הפייסבוק <span class="note">(קיים)</span></span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>תמונות</h2>
+  <ul>
+    <li><span class="pill must">חובה</span><span><strong>8–15 תמונות</strong> מהשטח: צעצועים לפני ואחרי, עטיפה, מתנדבים בעבודה, מסירה למסגרת</span></li>
+    <li><span class="pill must">חובה</span><span><strong>בלי פנים של ילדים</strong> <span class="note">(או מטושטשות, כמו שאתם כבר עושים בפייסבוק 👏)</span></span></li>
+    <li><span class="pill must">חובה</span><span><strong>אישור</strong> מהמבוגרים שמופיעים בתמונות</span></li>
+    <li><span class="pill nice">רצוי</span><span>תמונת “גיבור” אחת חזקה ורחבה, למשל ערימת הצעצועים העטופים מהקאבר בפייסבוק, ברזולוציה מלאה</span></li>
+  </ul>
+</section>
+
+<section class="money">
+  <h2>כסף</h2>
+  <p><strong>איך זה עובד היום (למיטב ידיעתנו, לאשר):</strong> מי שרוצה לתרום פונה אליכם, אתם שולחים פרטי חשבון בנק, התורם מעביר, ומקבל קבלה פיזית.</p>
+  <p><strong>מה האתר עושה כרגע:</strong> התורם בוחר סכום, ונפתח לו וואטסאפ אליכם עם הודעה מוכנה (“אני רוצה לתרום 72 ₪...”). משם ממשיכים כמו היום.</p>
+  <p><strong>הבעיה:</strong> כל תרומה דורשת התכתבות והעברה ידנית, וחלק מהאנשים מוותרים באמצע. תרומה טובה צריכה לקחת חצי דקה.</p>
+
+  <table>
+    <thead><tr><th>אפשרות</th><th>איך זה נראה לתורם</th><th>מה צריך מכם</th></tr></thead>
+    <tbody>
+      <tr>
+        <td>קישור תשלום<br><span class="note" style="font-weight:400"><bdi>Bit</bdi> עסקי / <bdi>PayBox</bdi> / דף תשלום</span></td>
+        <td>לוחץ ומשלם תוך שניות</td>
+        <td>קישור קבוע. באתר זה שינוי של הגדרה אחת</td>
+      </tr>
+      <tr>
+        <td>חברת סליקה<br><span class="rec">המלצה: Grow</span></td>
+        <td>דף תשלום מאובטח: אשראי, <bdi>Bit</bdi>, <bdi>Apple Pay</bdi>, <bdi>Google Pay</bdi>. <strong>קבלה דיגיטלית נשלחת אוטומטית</strong>, ואפשר גם תרומה חודשית</td>
+        <td>פתיחת חשבון: <strong>שני מורשי חתימה + חותמת</strong>. אין דמי מנוי, יש עמלה קטנה לכל תרומה (בערך 1.4% + מע״מ + 1 ₪)</td>
+      </tr>
+      <tr>
+        <td>Morning<br><span class="note" style="font-weight:400">חשבונית ירוקה</span></td>
+        <td>דף תשלום + קבלה אוטומטית</td>
+        <td>מתאים במיוחד אם כבר מפיקים אצלם קבלות</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <ul>
+    <li><span class="pill must">חובה</span><span><strong>באיזו מערכת אתם מפיקים היום קבלות?</strong> <span class="note">(<bdi>Morning</bdi>? <bdi>iCount</bdi>? ידני?)</span></span></li>
+    <li><span class="pill must">חובה</span><span><strong>איך מקבלים היום תרומות?</strong> <span class="note">(העברה בנקאית? <bdi>Bit</bdi>? <bdi>PayBox</bdi>? מזומן?)</span></span></li>
+    <li><span class="pill later">בהמשך</span><span><strong>איזו אפשרות מהטבלה מתאימה לכם?</strong> אחרי שנחליט, נעשה יחד את החיבור</span></li>
+    <li><span class="pill nice">רצוי</span><span>האם רוצים לאפשר <strong>תרומה חודשית קבועה</strong>?</span></li>
+  </ul>
+</section>
+
+<section>
+  <h2>דומיין ומשפטי</h2>
+  <ul>
+    <li><span class="pill must">חובה</span><span><strong>דומיין:</strong> ההמלצה היא <code>kinders.org.il</code> (כנראה פנוי). נרשם <strong>על שם העמותה</strong> אצל רשם מוסמך, בערך 70–100 ₪ לשנה</span></li>
+    <li><span class="pill nice">רצוי</span><span>אישור מרו״ח: האם העמותה פטורה זמנית מתקנות הנגישות לאתרים (מחזור מתחת ל-120 אלף ₪)? בכל מקרה האתר נבנה נגיש</span></li>
+    <li><span class="pill nice">רצוי</span><span>איש קשר לנושא נגישות <span class="note">(יופיע בהצהרת הנגישות באתר)</span></span></li>
+    <li><span class="pill must">חובה</span><span>לעבור על <strong>הצהרת הנגישות</strong> ו<strong>מדיניות הפרטיות</strong> באתר ולאשר <span class="note">(נכתבו לפי החוק הישראלי)</span></span></li>
+  </ul>
+</section>
+
+</body>
+</html>

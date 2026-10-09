@@ -120,20 +120,9 @@
     border: 0.3rem solid rgb(31 27 22 / 0.14);
   }
 
-  /* תגית קטנה אופקית (בחירת סכום, כיתובים) */
+  /* תגית קטנה אופקית (בחירת סכום, כיתובים). החוד בצד ה"התחלה", כלומר בצד ימין, כי האתר RTL */
   .mini-tag {
     --cut: 0.85rem;
-    clip-path: polygon(
-      var(--cut) 0,
-      100% 0,
-      100% 100%,
-      var(--cut) 100%,
-      0 50%
-    );
-    padding-inline-start: calc(var(--cut) + 0.55rem);
-  }
-
-  [dir="rtl"] .mini-tag {
     clip-path: polygon(
       0 0,
       calc(100% - var(--cut)) 0,

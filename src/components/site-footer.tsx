@@ -24,7 +24,7 @@ export function SiteFooter() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2.5 text-paper no-underline hover:underline"
               >
-                <WhatsappIcon className="size-5 text-[#3bd27a]" />
+                <WhatsappIcon className="size-5 text-whatsapp" />
                 וואטסאפ
                 <span className="sr-only">(נפתח בוואטסאפ)</span>
               </a>

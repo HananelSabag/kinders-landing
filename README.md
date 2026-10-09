@@ -46,4 +46,18 @@ npm run dev
 - [ ] הצהרת הנגישות הושלמה (רכז/ת נגישות)
 - [ ] דומיין מחובר (מומלץ `kinders.org.il`)
 
-מסמכי האפיון והמחקר: `docs/`
+## מסמכים
+| קובץ | מה יש בו |
+|---|---|
+| [`docs/06-technical-guide.md`](docs/06-technical-guide.md) | **איך האתר בנוי:** הטכנולוגיות, React מול Next.js מול Angular, ודוגמאות מהקוד |
+| [`DESIGN.md`](DESIGN.md) | מערכת העיצוב: צבעים, גופנים, התגית ומה לא עושים |
+| [`docs/03-decisions.md`](docs/03-decisions.md) | כל ההחלטות, עם תאריכים |
+| [`docs/02-spec.md`](docs/02-spec.md) | האפיון |
+| [`docs/01-research.md`](docs/01-research.md) | המחקר, עם מקורות (העמותה, סליקה, Vercel, נגישות) |
+| [`docs/04-content-from-nonprofit.md`](docs/04-content-from-nonprofit.md) | מה צריך מהעמותה. גרסת PDF מעוצבת ב-`docs/pdf/` |
+| [`docs/05-skills-and-tools.md`](docs/05-skills-and-tools.md) | ה-Skills והכלים של Claude Code |
+
+**ליצור את ה-PDF מחדש** אחרי שינוי ב-`docs/pdf/nonprofit-checklist.html` (צריך את Edge שמותקן ב-Windows):
+```bash
+"/c/Program Files (x86)/Microsoft/Edge/Application/msedge.exe" --headless=new --no-pdf-header-footer --virtual-time-budget=15000 --print-to-pdf="docs/pdf/הקינדרס - מה צריך מהעמותה.pdf" "file:///C:/dev/kinders-landing/docs/pdf/nonprofit-checklist.html"
+```
