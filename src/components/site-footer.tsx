@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { Phone } from "lucide-react";
+import { Phone, Share2 } from "lucide-react";
 import { site } from "@/content/site";
-import { whatsappLink, whatsappMessages } from "@/lib/whatsapp";
+import { shareMessages, whatsappLink, whatsappMessages, whatsappShareLink } from "@/lib/whatsapp";
 import { Logo } from "./ui/logo";
 import { WhatsappIcon } from "./ui/whatsapp-icon";
 
@@ -20,6 +20,16 @@ export function SiteFooter({ variant = "a" }: { variant?: keyof typeof variants 
         <div className="md:col-span-5">
           <Logo tone="paper" nameClassName={v.name} />
           <p className={`measure mt-4 text-lg ${v.mute}`}>{site.description}</p>
+          <a
+            href={whatsappShareLink(shareMessages.site)}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex items-center gap-2.5 text-lg font-semibold text-inherit underline underline-offset-4"
+          >
+            <Share2 className={`size-5 ${v.accent}`} aria-hidden />
+            שתפו את העמותה עם חברים
+            <span className="sr-only">(נפתח בוואטסאפ)</span>
+          </a>
         </div>
 
         <div className="md:col-span-4">

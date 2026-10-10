@@ -1,10 +1,9 @@
 "use client";
 
-import { useActionState, useState } from "react";
 import { useFormStatus } from "react-dom";
-import { startDonation, type DonateState } from "@/app/actions";
 import { site } from "@/content/site";
 import { formatIls } from "@/lib/format";
+import { useDonation } from "@/lib/use-donation";
 
 type Props = {
   idPrefix: string;
@@ -14,15 +13,10 @@ type Props = {
   compact?: boolean;
 };
 
-const { amounts, defaultAmount, minAmount, maxAmount } = site.donate;
-const initialState: DonateState = {};
+const { amounts, minAmount, maxAmount } = site.donate;
 
 export function DonateForm({ idPrefix, ctaLabel, ctaHint, compact = false }: Props) {
-  const [state, formAction] = useActionState(startDonation, initialState);
-  const [selected, setSelected] = useState<string>(String(defaultAmount));
-  const [frequency, setFrequency] = useState<"one_time" | "monthly">("one_time");
-
-  const impact = amounts.find((a) => String(a.value) === selected)?.impact;
+  const { state, formAction, selected, setSelected, frequency, setFrequency, impact } = useDonation();
   const errorId = `${idPrefix}-error`;
 
   return (

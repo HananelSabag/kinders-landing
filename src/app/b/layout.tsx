@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Fredoka, Heebo } from "next/font/google";
 
 // עיצוב ב: Fredoka לכותרות (גופן משתנה עם ציר רוחב, בשביל הכותרת ש"מתנפחת") ו-Heebo לטקסט
@@ -19,6 +19,9 @@ export const metadata: Metadata = {
   title: "עיצוב ב",
   alternates: { canonical: "/" },
 };
+
+// צבע שורת הכתובת בדפדפן בנייד, כמו ראש הדף
+export const viewport: Viewport = { themeColor: "#f8dea1" };
 
 export default function VersionBLayout({ children }: LayoutProps<"/b">) {
   return <div className={`${fredoka.variable} ${heebo.variable} v-b`}>{children}</div>;

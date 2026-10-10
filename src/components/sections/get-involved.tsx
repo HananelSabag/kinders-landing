@@ -12,7 +12,7 @@ export function GetInvolved() {
         <div className="pb-12 md:pe-14 md:pb-0">
           <h3 className="text-[clamp(1.6rem,3vw,2.25rem)] font-bold">{site.involved.framework.title}</h3>
           <p className="measure mt-3 text-lg text-ink-soft">{site.involved.framework.text}</p>
-          <WhatsappButton message={whatsappMessages.framework} className="mt-6">
+          <WhatsappButton message={whatsappMessages.framework} className="btn btn-outline mt-6">
             לפנייה בוואטסאפ
           </WhatsappButton>
         </div>
@@ -20,7 +20,7 @@ export function GetInvolved() {
         <div className="border-t-2 border-dashed border-ink/25 pt-12 md:border-t-0 md:border-s-2 md:ps-14 md:pt-0">
           <h3 className="text-[clamp(1.6rem,3vw,2.25rem)] font-bold">{site.involved.volunteer.title}</h3>
           <p className="measure mt-3 text-lg text-ink-soft">{site.involved.volunteer.text}</p>
-          <WhatsappButton message={whatsappMessages.volunteer} className="mt-6">
+          <WhatsappButton message={whatsappMessages.volunteer} className="btn btn-outline mt-6">
             להצטרפות בוואטסאפ
           </WhatsappButton>
         </div>

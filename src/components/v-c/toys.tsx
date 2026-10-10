@@ -1,18 +1,8 @@
 import Image from "next/image";
 import { Check, X } from "lucide-react";
 import { site } from "@/content/site";
-import { whatsappLink, whatsappMessages } from "@/lib/whatsapp";
-import { WhatsappIcon } from "@/components/ui/whatsapp-icon";
-
-function WhatsappLink({ message, children }: { message: string; children: React.ReactNode }) {
-  return (
-    <a href={whatsappLink(message)} target="_blank" rel="noopener noreferrer" className="c-btn c-btn-line">
-      <WhatsappIcon className="size-5 shrink-0 text-whatsapp" />
-      <span>{children}</span>
-      <span className="sr-only">(נפתח בוואטסאפ)</span>
-    </a>
-  );
-}
+import { whatsappMessages } from "@/lib/whatsapp";
+import { WhatsappButton } from "@/components/ui/whatsapp-button";
 
 export function CToys() {
   const { accept, reject, handoff } = site.toys;
@@ -58,7 +48,9 @@ export function CToys() {
             <h3 className="text-xl font-bold">איך מוסרים</h3>
             <p className="mt-2 max-w-[36rem] text-lg leading-relaxed">{handoff}</p>
             <div className="mt-5">
-              <WhatsappLink message={whatsappMessages.toys}>לתיאום מסירה בוואטסאפ</WhatsappLink>
+              <WhatsappButton message={whatsappMessages.toys} className="c-btn c-btn-line">
+                לתיאום מסירה בוואטסאפ
+              </WhatsappButton>
             </div>
           </div>
         </div>
@@ -80,14 +72,18 @@ export function CToys() {
             <h3 className="text-2xl font-bold">{framework.title}</h3>
             <p className="mt-2 max-w-[32rem] text-lg leading-relaxed text-c-mute">{framework.text}</p>
             <div className="mt-5">
-              <WhatsappLink message={whatsappMessages.framework}>לפנייה בוואטסאפ</WhatsappLink>
+              <WhatsappButton message={whatsappMessages.framework} className="c-btn c-btn-line">
+                לפנייה בוואטסאפ
+              </WhatsappButton>
             </div>
           </div>
           <div>
             <h3 className="text-2xl font-bold">{volunteer.title}</h3>
             <p className="mt-2 max-w-[32rem] text-lg leading-relaxed text-c-mute">{volunteer.text}</p>
             <div className="mt-5">
-              <WhatsappLink message={whatsappMessages.volunteer}>להצטרפות בוואטסאפ</WhatsappLink>
+              <WhatsappButton message={whatsappMessages.volunteer} className="c-btn c-btn-line">
+                להצטרפות בוואטסאפ
+              </WhatsappButton>
             </div>
           </div>
         </div>

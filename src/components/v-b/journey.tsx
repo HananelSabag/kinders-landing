@@ -163,7 +163,7 @@ export function BJourney() {
                   {i + 1}
                 </span>
                 <h3 className="mt-5 text-[clamp(2.4rem,5.5vw,4.25rem)] font-semibold">{step.title}</h3>
-                <p className="mt-4 max-w-md text-xl leading-relaxed text-b-ink/80">{step.text}</p>
+                <p className="mt-4 max-w-md text-xl leading-relaxed text-b-ink/80 md:text-2xl md:leading-relaxed">{step.text}</p>
               </div>
             </li>
           ))}

@@ -19,6 +19,7 @@ const tones = {
 export function MobileMenu({ links, children, tone = "paper" }: Props) {
   const [open, setOpen] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const rootRef = useRef<HTMLDivElement>(null);
   const t = tones[tone];
 
   useEffect(() => {
@@ -29,12 +30,20 @@ export function MobileMenu({ links, children, tone = "paper" }: Props) {
         buttonRef.current?.focus();
       }
     };
+    // לחיצה מחוץ לתפריט סוגרת אותו
+    const onPointer = (e: PointerEvent) => {
+      if (!rootRef.current?.contains(e.target as Node)) setOpen(false);
+    };
     document.addEventListener("keydown", onKey);
-    return () => document.removeEventListener("keydown", onKey);
+    document.addEventListener("pointerdown", onPointer);
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.removeEventListener("pointerdown", onPointer);
+    };
   }, [open]);
 
   return (
-    <div className="lg:hidden">
+    <div ref={rootRef} className="lg:hidden">
       <button
         ref={buttonRef}
         type="button"
@@ -50,7 +59,7 @@ export function MobileMenu({ links, children, tone = "paper" }: Props) {
       <div
         id="mobile-nav"
         hidden={!open}
-        className={`absolute inset-x-0 top-full max-h-[calc(100dvh-5rem)] overflow-y-auto border-b px-5 pb-5 text-start shadow-[0_18px_24px_-18px_rgb(31_27_22/0.35)] ${t.panel}`}
+        className={`absolute inset-x-0 top-full max-h-[calc(100dvh-5rem)] overflow-y-auto overscroll-contain border-b px-5 pb-5 text-start shadow-[0_18px_24px_-18px_rgb(31_27_22/0.35)] ${t.panel}`}
       >
         <nav aria-label="ניווט ראשי">
           <ul className="flex flex-col">

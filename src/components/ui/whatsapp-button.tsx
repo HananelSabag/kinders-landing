@@ -1,20 +1,22 @@
-import { whatsappLink } from "@/lib/whatsapp";
+import { whatsappLink, whatsappShareLink } from "@/lib/whatsapp";
 import { WhatsappIcon } from "./whatsapp-icon";
 
 type Props = {
   message: string;
   children: React.ReactNode;
-  variant?: "outline" | "mustard";
+  /** true: שיתוף, המשתמש בוחר למי לשלוח. false (ברירת מחדל): הודעה לעמותה */
+  share?: boolean;
+  /** המחלקות של הכפתור. ברירת המחדל היא הכפתור של עיצוב א */
   className?: string;
 };
 
-export function WhatsappButton({ message, children, variant = "outline", className = "" }: Props) {
+export function WhatsappButton({ message, children, share = false, className = "btn btn-outline" }: Props) {
   return (
     <a
-      href={whatsappLink(message)}
+      href={share ? whatsappShareLink(message) : whatsappLink(message)}
       target="_blank"
       rel="noopener noreferrer"
-      className={`btn ${variant === "mustard" ? "btn-mustard" : "btn-outline"} ${className}`}
+      className={className}
     >
       <WhatsappIcon className="size-5 shrink-0 text-whatsapp" />
       <span>{children}</span>

@@ -45,7 +45,7 @@ export function Toys() {
           <div className="mt-12 border-t-2 border-dashed border-ink/25 pt-8">
             <h3 className="text-2xl font-bold">איך מוסרים</h3>
             <p className="measure mt-2 text-lg">{handoff}</p>
-            <WhatsappButton message={whatsappMessages.toys} className="mt-6">
+            <WhatsappButton message={whatsappMessages.toys} className="btn btn-outline mt-6">
               לתיאום מסירה בוואטסאפ
             </WhatsappButton>
           </div>
