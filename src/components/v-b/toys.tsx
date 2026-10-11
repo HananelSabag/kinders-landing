@@ -1,10 +1,13 @@
-import { Check, X } from "lucide-react";
+import { MapPin, Package, Truck } from "lucide-react";
 import { site } from "@/content/site";
 import { whatsappMessages } from "@/lib/whatsapp";
 import { WhatsappButton } from "@/components/ui/whatsapp-button";
 
+// לפי הסדר של site.toys.ways: מביאים אלינו, נקודות איסוף, איסוף מהבית
+const wayIcons = [Package, MapPin, Truck];
+
 export function BToys() {
-  const { accept, reject, handoff } = site.toys;
+  const { accept, ways } = site.toys;
   const { framework, volunteer } = site.involved;
 
   return (
@@ -17,43 +20,32 @@ export function BToys() {
           צעצוע שכבר לא משחקים בו יכול להיות הצעצוע הכי אהוב של מישהו אחר.
         </p>
 
-        <div className="mt-14 grid gap-12 md:grid-cols-2 md:gap-16">
-          <div>
-            <h3 className="text-3xl font-semibold">נשמח לקבל</h3>
-            <ul className="mt-6 space-y-4">
-              {accept.map((item) => (
-                <li key={item} className="flex items-start gap-3.5 text-xl">
-                  <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full bg-b-deep text-white">
-                    <Check className="size-4" strokeWidth={3} aria-hidden />
-                  </span>
-                  {item}
-                </li>
-              ))}
+        <div className="mt-14 grid gap-12 md:grid-cols-12 md:gap-16">
+          <div className="md:col-span-5">
+            <h3 className="text-3xl font-semibold">מה מקבלים</h3>
+            <p className="mt-4 font-b-display text-[clamp(1.6rem,3.2vw,2.4rem)] leading-tight font-medium">{accept}</p>
+          </div>
+          <div className="md:col-span-7">
+            <h3 className="text-3xl font-semibold">שלוש דרכים למסור</h3>
+            <ul className="mt-6 space-y-5">
+              {ways.map((way, i) => {
+                const Icon = wayIcons[i] ?? Package;
+                return (
+                  <li key={way.title} className="flex items-start gap-4 text-xl">
+                    <span className="grid size-11 shrink-0 place-items-center rounded-full bg-b-deep text-white">
+                      <Icon className="size-5" aria-hidden />
+                    </span>
+                    <span className="pt-1.5">
+                      <strong className="font-semibold">{way.title}.</strong> {way.text}
+                    </span>
+                  </li>
+                );
+              })}
             </ul>
+            <WhatsappButton message={whatsappMessages.toys} className="b-btn b-btn-ink mt-8">
+              לתיאום מסירה בוואטסאפ
+            </WhatsappButton>
           </div>
-          <div>
-            <h3 className="text-3xl font-semibold">לא נוכל לקבל</h3>
-            <ul className="mt-6 space-y-4">
-              {reject.map((item) => (
-                <li key={item} className="flex items-start gap-3.5 text-xl">
-                  <span className="mt-0.5 grid size-7 shrink-0 place-items-center rounded-full bg-[#a3241b] text-white">
-                    <X className="size-4" strokeWidth={3} aria-hidden />
-                  </span>
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-16 flex flex-col gap-6 rounded-[2rem] bg-white p-7 md:flex-row md:items-center md:justify-between md:p-10">
-          <div>
-            <h3 className="text-3xl font-semibold">איך מוסרים</h3>
-            <p className="mt-2 max-w-xl text-xl leading-relaxed text-b-ink/80">{handoff}</p>
-          </div>
-          <WhatsappButton message={whatsappMessages.toys} className="b-btn b-btn-ink shrink-0">
-            לתיאום מסירה בוואטסאפ
-          </WhatsappButton>
         </div>
 
         <div className="mt-20 grid gap-14 md:grid-cols-2 md:gap-16">

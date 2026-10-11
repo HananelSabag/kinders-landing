@@ -12,6 +12,17 @@ export function BVoice() {
         </blockquote>
         <figcaption className="mt-8 text-xl text-b-ink/70">{site.voice.by}</figcaption>
       </figure>
+
+      <figure className="mx-auto mt-16 max-w-5xl md:mt-24">
+        <ul className="flex flex-wrap gap-3 md:gap-4">
+          {site.voice.heard.map((line) => (
+            <li key={line} className="rounded-[1.75rem] bg-b-cello px-6 py-4 font-b-display text-[clamp(1.4rem,3vw,2.25rem)] font-medium md:px-9 md:py-6">
+              <q>{line}</q>
+            </li>
+          ))}
+        </ul>
+        <figcaption className="mt-5 text-xl text-b-ink/70">{site.voice.heardBy}</figcaption>
+      </figure>
     </section>
   );
 }

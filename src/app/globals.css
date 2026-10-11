@@ -101,6 +101,10 @@
     outline-color: var(--color-mustard);
   }
 
+  q {
+    quotes: "„" "“";
+  }
+
   a {
     text-underline-offset: 0.22em;
     text-decoration-thickness: 1.5px;

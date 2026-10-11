@@ -32,7 +32,7 @@ npm run dev
 - **`whatsapp`** (ברירת מחדל, עד שתיפתח סליקה): התורם עובר לוואטסאפ של העמותה עם הודעה מוכנה
 - **`link`**: דף תשלום קבוע של ספק הסליקה (`PAYMENT_LINK_URL`)
 - **`mock`**: לפיתוח
-- **Phase 2:** ספק אמיתי (מומלץ Grow) = קובץ חדש ב-`src/lib/payments/providers/` שמממש `PaymentProvider`
+- **`grow`**: חיבור מלא ל-Grow. הקוד מוכן אבל לא פעיל ולא נבדק, עד שלעמותה יהיה חשבון ([פירוט](docs/08-payments-grow.md))
 
 ## פריסה ל-Vercel (פעם אחת)
 1. מעלים את הפרויקט ל-GitHub (GitHub Desktop: File → Add local repository → Publish repository)
@@ -59,6 +59,7 @@ npm run dev
 | [`docs/04-content-from-nonprofit.md`](docs/04-content-from-nonprofit.md) | מה צריך מהעמותה. גרסת PDF מעוצבת ב-`docs/pdf/` |
 | [`docs/05-skills-and-tools.md`](docs/05-skills-and-tools.md) | ה-Skills והכלים של Claude Code |
 | [`docs/07-versions.md`](docs/07-versions.md) | שלושת העיצובים, מה זז בעיצוב ב, ומה מוחקים כשהעמותה בוחרת |
+| [`docs/08-payments-grow.md`](docs/08-payments-grow.md) | תרומה באשראי: מה העמותה צריכה כדי לפתוח Grow, מה מוכן בקוד ומה חסר, וקבלות אחרי אישור 46 |
 
 **ליצור את ה-PDF מחדש** אחרי שינוי ב-`docs/pdf/nonprofit-checklist.html` (צריך את Edge שמותקן ב-Windows):
 ```bash

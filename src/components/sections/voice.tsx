@@ -9,6 +9,17 @@ export function Voice() {
         </blockquote>
         <figcaption className="mt-6 text-lg text-ink-soft">{site.voice.by}</figcaption>
       </figure>
+
+      <figure className="mx-auto mt-14 max-w-3xl border-t-2 border-dashed border-ink/25 pt-10 text-center">
+        <ul className="flex flex-wrap justify-center gap-x-10 gap-y-3 font-display text-[clamp(1.3rem,2.6vw,1.75rem)]">
+          {site.voice.heard.map((line) => (
+            <li key={line}>
+              <q>{line}</q>
+            </li>
+          ))}
+        </ul>
+        <figcaption className="mt-4 text-lg text-ink-soft">{site.voice.heardBy}</figcaption>
+      </figure>
     </section>
   );
 }

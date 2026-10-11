@@ -1,11 +1,14 @@
 import Image from "next/image";
-import { Check, X } from "lucide-react";
+import { MapPin, Package, Truck } from "lucide-react";
 import { site } from "@/content/site";
 import { whatsappMessages } from "@/lib/whatsapp";
 import { WhatsappButton } from "@/components/ui/whatsapp-button";
 
+// לפי הסדר של site.toys.ways: מביאים אלינו, נקודות איסוף, איסוף מהבית
+const wayIcons = [Package, MapPin, Truck];
+
 export function CToys() {
-  const { accept, reject, handoff } = site.toys;
+  const { accept, ways } = site.toys;
   const { framework, volunteer } = site.involved;
 
   return (
@@ -19,35 +22,27 @@ export function CToys() {
             צעצוע שכבר לא משחקים בו יכול להיות הצעצוע הכי אהוב של מישהו אחר.
           </p>
 
-          <div className="mt-10 grid gap-10 sm:grid-cols-2">
-            <div>
-              <h3 className="text-xl font-bold">נשמח לקבל</h3>
-              <ul className="mt-4 space-y-2.5">
-                {accept.map((item) => (
-                  <li key={item} className="flex gap-2.5 text-lg">
-                    <Check className="mt-1 size-5 shrink-0 text-c-teal" strokeWidth={2.4} aria-hidden />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold">לא נוכל לקבל</h3>
-              <ul className="mt-4 space-y-2.5">
-                {reject.map((item) => (
-                  <li key={item} className="flex gap-2.5 text-lg">
-                    <X className="mt-1 size-5 shrink-0 text-[#a3341b]" strokeWidth={2.4} aria-hidden />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="mt-10">
+            <h3 className="text-xl font-bold">מה מקבלים</h3>
+            <p className="mt-2 text-xl">{accept}</p>
           </div>
 
-          <div className="mt-10 border-t border-c-line pt-8">
-            <h3 className="text-xl font-bold">איך מוסרים</h3>
-            <p className="mt-2 max-w-[36rem] text-lg leading-relaxed">{handoff}</p>
-            <div className="mt-5">
+          <div className="mt-8 border-t border-c-line pt-8">
+            <h3 className="text-xl font-bold">שלוש דרכים למסור</h3>
+            <ul className="mt-4 space-y-3.5">
+              {ways.map((way, i) => {
+                const Icon = wayIcons[i] ?? Package;
+                return (
+                  <li key={way.title} className="flex gap-3 text-lg">
+                    <Icon className="mt-1 size-5 shrink-0 text-c-teal" aria-hidden />
+                    <span>
+                      <strong className="font-semibold">{way.title}.</strong> {way.text}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+            <div className="mt-6">
               <WhatsappButton message={whatsappMessages.toys} className="c-btn c-btn-line">
                 לתיאום מסירה בוואטסאפ
               </WhatsappButton>

@@ -10,7 +10,7 @@ export function BImpact() {
   const ok = useMotionOK();
   const ref = useRef<HTMLParagraphElement>(null);
   const inView = useInView(ref, { once: true, amount: 0.7 });
-  const { toys, frameworks } = site.impact;
+  const { children, frameworks, localities } = site.impact;
 
   return (
     <section aria-label="מה עשינו עד היום" className="on-ink bg-b-deep px-5 py-20 text-white md:py-28">
@@ -18,12 +18,18 @@ export function BImpact() {
         ref={ref}
         className="mx-auto max-w-5xl text-center font-b-display text-[clamp(1.9rem,4.6vw,3.75rem)] leading-[1.25] font-medium"
       >
-        מאז {site.foundedYear} יצאו מאיתנו <Counter to={toys} ok={ok} run={inView} /> צעצועים עטופים, אל{" "}
-        <Counter to={frameworks} ok={ok} run={inView} /> מסגרות לילדים.
+        מאז {site.foundedYear} הגענו אל <Counter to={children} ok={ok} run={inView} /> ילדים,{" "}
+        <span className="whitespace-nowrap">
+          ב-
+          <Counter to={frameworks} ok={ok} run={inView} />
+        </span>{" "}
+        מסגרות{" "}
+        <span className="whitespace-nowrap">
+          וב-
+          <Counter to={localities} ok={ok} run={inView} />
+        </span>{" "}
+        יישובים.
       </p>
-      {site.isDraft ? (
-        <p className="mt-5 text-center text-base text-b-sky">(המספרים לדוגמה, עד שנקבל את הנתונים מהעמותה)</p>
-      ) : null}
     </section>
   );
 }

@@ -40,7 +40,9 @@ export function Faq() {
               </div>
               <div>
                 <dt className="text-base text-ink-soft">פעילות</dt>
-                <dd className="font-bold">{site.city} וכל הארץ</dd>
+                <dd className="font-bold">
+                  <span className="tabular-nums">{site.impact.localities}</span> יישובים ברחבי הארץ
+                </dd>
               </div>
             </dl>
             <a

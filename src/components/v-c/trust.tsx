@@ -2,18 +2,18 @@ import { site } from "@/content/site";
 import { formatNumber } from "@/lib/format";
 
 export function CTrust() {
-  const sample = site.isDraft ? " (לדוגמה)" : "";
+  const { children, frameworks, localities } = site.impact;
   const facts = [
+    { label: "ילדים שקיבלו צעצוע", value: formatNumber(children) },
+    { label: "מסגרות", value: formatNumber(frameworks) },
+    { label: "יישובים", value: formatNumber(localities) },
     { label: "עמותה רשומה", value: `${site.legalName}, מס׳ ${site.registrationNumber}` },
-    { label: "שנת ייסוד", value: String(site.foundedYear) },
-    { label: "צעצועים שחולקו", value: `${formatNumber(site.impact.toys)}${sample}` },
-    { label: "מסגרות שקיבלו צעצועים", value: `${formatNumber(site.impact.frameworks)}${sample}` },
   ];
 
   return (
     <section aria-labelledby="c-trust-title" className="pt-20 lg:pt-28">
       <h2 id="c-trust-title" className="text-[clamp(1.9rem,3.6vw,2.75rem)] font-bold">
-        שקיפות
+        מאז {site.foundedYear}, במספרים
       </h2>
       <dl className="mt-8 grid border-t border-c-line sm:grid-cols-2">
         {facts.map((f) => (

@@ -17,7 +17,7 @@ export function CHero() {
         </li>
         <li className="flex items-center gap-2">
           <MapPin className="size-5 shrink-0 text-c-teal" aria-hidden />
-          מירושלים ועד עכו
+          {site.impact.localities} יישובים ברחבי הארץ
         </li>
         <li className="flex items-center gap-2">
           <Gift className="size-5 shrink-0 text-c-teal" aria-hidden />

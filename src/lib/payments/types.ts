@@ -29,6 +29,8 @@ export interface PaymentProvider {
   ctaLabel: string;
   /** שורה קטנה מתחת לכפתור */
   ctaHint: string;
+  /** true: הספק דורש שם וטלפון של התורם לפני המעבר לתשלום (Grow). הטופס עוד לא אוסף אותם */
+  requiresDonor?: boolean;
   createDonation(input: CreateDonationInput): Promise<CreateDonationResult>;
   parseWebhook?(req: Request): Promise<DonationEvent>;
 }
