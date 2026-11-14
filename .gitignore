@@ -44,3 +44,9 @@ next-env.d.ts
 # claude code (local only)
 .claude/settings.local.json
 .impeccable/
+
+# Local-only: AI-agent notes, IDE settings and build outputs
+AGENTS.md
+CLAUDE.md
+NEXT_SESSION_PROMPT.md
+.claude/
